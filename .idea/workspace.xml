@@ -4,19 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="887d5476-f0fc-4cba-8ce8-96dee3645488" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Vistas/MascotaGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/aplicacion/Aplicacion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/MascotaDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entidades/Mascota.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+    <list default="true" id="887d5476-f0fc-4cba-8ce8-96dee3645488" name="Changes" comment="Se realiza la primera guia.hibernate y JPA">
+      <change beforePath="$PROJECT_DIR$/src/main/java/Vistas/MascotaGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Vistas/MascotaGUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +59,7 @@
       <recent name="C:\Users\juanj\Desktop\ADSO\JAVA\FUNDAMENTOS DE PROGRAMACION EN JAVA\CONEXION BD JAVA\bd_hibernate\src\test" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.gui.MascotaGUI">
+  <component name="RunManager" selected="Application.MascotaGUI">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="bd_hibernate" />
@@ -125,8 +114,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.gui.MascotaGUI" />
         <item itemvalue="Application.MascotaGUI" />
+        <item itemvalue="Application.gui.MascotaGUI" />
         <item itemvalue="Application.Principal" />
         <item itemvalue="Application.Main" />
       </list>
@@ -141,7 +130,31 @@
       <option name="presentableId" value="Default" />
       <updated>1731006741473</updated>
     </task>
+    <task id="LOCAL-00001" summary="Se realiza la primera guia.hibernate y JPA">
+      <option name="closed" value="true" />
+      <created>1731073425904</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1731073425904</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Se realiza la primera guia.hibernate y JPA" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se realiza la primera guia.hibernate y JPA" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
