@@ -5,19 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="887d5476-f0fc-4cba-8ce8-96dee3645488" name="Changes" comment="se hacen unos cambios en la app">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Clases/GestionMascotas.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Clases/GestionPersonas.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/PersonaDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entidades/Nacimiento.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entidades/Persona.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/A.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/aplicacion/Aplicacion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/aplicacion/JPAUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/aplicacion/Principal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/MascotaDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/MascotaDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases/GestionPersonas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases/GestionPersonas.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,18 +29,18 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "jujohiro"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;jujohiro&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/jujohiro/hbiernateBD.git",
-    "accountId": "70739e5b-b45a-48c0-8693-8338f94bba86"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/jujohiro/hbiernateBD.git&quot;,
+    &quot;accountId&quot;: &quot;70739e5b-b45a-48c0-8693-8338f94bba86&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -184,7 +173,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731096776958</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="se realiza la segunda guia, se prueba y funciona tal cual la guia.">
+      <option name="closed" value="true" />
+      <created>1731130758558</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1731130758558</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -201,7 +198,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Se realiza la primera guia.hibernate y JPA" />
     <MESSAGE value="se hacen unos cambios en la app" />
-    <option name="LAST_COMMIT_MESSAGE" value="se hacen unos cambios en la app" />
+    <MESSAGE value="se realiza la segunda guia, se prueba y funciona tal cual la guia." />
+    <option name="LAST_COMMIT_MESSAGE" value="se realiza la segunda guia, se prueba y funciona tal cual la guia." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

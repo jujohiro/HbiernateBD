@@ -6,6 +6,7 @@ import entidades.Persona;
 
 import javax.swing.*;
 import java.time.LocalDate;
+import java.util.List;
 
 public class GestionPersonas {
 
@@ -123,7 +124,26 @@ public class GestionPersonas {
     }
 
     private void consultarLista() {
-    }
+
+            List<Persona> listaPersonas = miPersonaDao.consultarListaPersonas();
+
+            // Verificar si la lista no está vacía
+            if (listaPersonas != null && !listaPersonas.isEmpty()) {
+                StringBuilder personasInfo = new StringBuilder("Lista de Personas:\n");
+
+                // Recorrer la lista de personas y añadir información al StringBuilder
+                for (Persona persona : listaPersonas) {
+                    personasInfo.append(persona).append("\n");
+                }
+
+                // Mostrar la lista de personas por consola
+                System.out.println(personasInfo.toString());
+            } else {
+                // Si no hay personas registradas, mostrar un mensaje por consola
+                System.out.println("No se encontraron registros de personas.");
+            }
+            System.out.println();
+        }
 
     private void eliminar() {
         Long idPersona = Long.parseLong(JOptionPane.
