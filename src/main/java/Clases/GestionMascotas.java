@@ -1,54 +1,38 @@
-package aplicacion;
-
-import java.util.List;
-
-import javax.swing.JOptionPane;
+package Clases;
 
 import dao.MascotaDao;
 import entidades.Mascota;
 
+import javax.swing.*;
+import java.util.List;
 
-public class Aplicacion {
-
+public class GestionMascotas {
     MascotaDao miMascotaDao = new MascotaDao();
 
-    public void iniciar() {
+    public GestionMascotas() {
 
-        String menu = "MENU DE OPCIONES\n\n";
-        menu += "1. Registrar Mascota\n";
-        menu += "2. Consultar Mascota\n";
-        menu += "3. Consultar Lista de Mascotas\n";
-        menu += "4. Consultar Lista de Mascotas por sexo\n";
-        menu += "5. Actualizar Mascota\n";
-        menu += "6. Eliminar Mascota\n";
-        menu += "7. Salir\n";
+        String menu="MENU DE OPCIONES - GESTION MASCOTAS\n\n";
+        menu+="1. Registrar Mascota\n";
+        menu+="2. Consultar Mascota\n";
+        menu+="3. Consultar Lista de Mascotas\n";
+        menu+="4. Consultar Lista de Mascotas por sexo\n";
+        menu+="5. Actualizar Mascota\n";
+        menu+="6. Eliminar Mascota\n";
+        menu+="7. Salir\n";
 
-        int opc = 0;
-        while (opc != 7) {
-            opc = Integer.parseInt(JOptionPane.showInputDialog(menu));
+        int opc=0;
+
+        while(opc!=7) {
+            opc=Integer.parseInt(JOptionPane.showInputDialog(menu));
 
             switch (opc) {
-                case 1:
-                    registrar();
-                    break;
-                case 2:
-                    consultar();
-                    break;
-                case 3:
-                    consultarLista();
-                    break;
-                case 4:
-                    consultarListaPorSexo();
-                    break;
-                case 5:
-                    actualizar();
-                    break;
-                case 6:
-                    eliminar();
-                    break;
-                case 7:
-                    miMascotaDao.close();
-                    break;
+                case 1: registrar(); break;
+                case 2: consultar(); break;
+                case 3: consultarLista();break;
+                case 4: consultarListaPorSexo();	break;
+                case 5: actualizar();	break;
+                case 6: eliminar(); 	break;
+                case 7:	miMascotaDao.close();	break;
             }
         }
     }
@@ -64,6 +48,7 @@ public class Aplicacion {
         System.out.println(miMascotaDao.registrarMascota(miMascota));
         System.out.println();
     }
+
     private void consultar() {
         Long idMascota = Long.parseLong(JOptionPane.showInputDialog("Ingrese el id de la Mascota"));
 
@@ -121,7 +106,7 @@ public class Aplicacion {
     }
 
     private void eliminar() {
-        Long idMascota = Long.parseLong(JOptionPane.showInputDialog("Ingrese el id de la mascota para eliminar"));
+        Long idMascota = Long.parseLong(JOptionPane.showInputDialog("Ingrese el id de la Mascota para eliminar"));
         Mascota miMascota = miMascotaDao.consultarMascota(idMascota);
 
         if (miMascota != null) {
@@ -132,13 +117,9 @@ public class Aplicacion {
             System.out.println();
         } else {
             System.out.println();
-            System.out.println("No se encontro la mascota");
+            System.out.println("No se encontró la mascota");
         }
         System.out.println();
-
     }
 }
 
-        
-    
-    

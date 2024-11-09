@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="887d5476-f0fc-4cba-8ce8-96dee3645488" name="Changes" comment="se hacen unos cambios en la app" />
+    <list default="true" id="887d5476-f0fc-4cba-8ce8-96dee3645488" name="Changes" comment="se hacen unos cambios en la app">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Clases/GestionMascotas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Clases/GestionPersonas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/PersonaDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entidades/Nacimiento.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entidades/Persona.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/A.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/aplicacion/Aplicacion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/aplicacion/JPAUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/aplicacion/Principal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/MascotaDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/MascotaDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,8 +33,25 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "jujohiro"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/jujohiro/hbiernateBD.git",
+    "accountId": "70739e5b-b45a-48c0-8693-8338f94bba86"
+  }
+}]]></component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -42,7 +73,7 @@
     "Application.gui.MascotaGUI.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "Hibernate1",
     "kotlin-language-version-configured": "true",
     "onboarding.tips.debug.path": "C:/Users/juanj/Desktop/ADSO/JAVA/FUNDAMENTOS DE PROGRAMACION EN JAVA/CONEXION BD JAVA/bd_hibernate/src/main/java/org/example/Main.java",
     "project.structure.last.edited": "Modules",
@@ -57,7 +88,7 @@
       <recent name="C:\Users\juanj\Desktop\ADSO\JAVA\FUNDAMENTOS DE PROGRAMACION EN JAVA\CONEXION BD JAVA\bd_hibernate\src\test" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MascotaGUI">
+  <component name="RunManager" selected="Application.Principal">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="bd_hibernate" />
@@ -112,10 +143,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Principal" />
         <item itemvalue="Application.MascotaGUI" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.gui.MascotaGUI" />
         <item itemvalue="Application.Principal" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -178,6 +210,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
           <line>13</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/aplicacion/Principal.java</url>
+          <line>7</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
