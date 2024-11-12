@@ -2,6 +2,7 @@ package Clases;
 
 import dao.MascotaDao;
 import entidades.Mascota;
+import entidades.Persona;
 
 import javax.swing.*;
 import java.util.List;
@@ -44,6 +45,12 @@ public class GestionMascotas {
         miMascota.setRaza(JOptionPane.showInputDialog("Ingrese la raza de la mascota"));
         miMascota.setColorMascota(JOptionPane.showInputDialog("Ingrese el color de la mascota"));
         miMascota.setSexo(JOptionPane.showInputDialog("Ingrese el sexo de su mascota"));
+
+        //Se solicita el id del dueño
+        Long idDuenio=Long.parseLong(JOptionPane.showInputDialog("Ingrese el documento del dueño"));
+        Persona duenio=new Persona();//Se genera la instancia para permitir el registro
+        duenio.setIdPersona(idDuenio);//se agrega el id solicitado
+        miMascota.setDuenio(duenio);//Se agrega el dueño a la mascota
 
         System.out.println(miMascotaDao.registrarMascota(miMascota));
         System.out.println();
@@ -95,6 +102,12 @@ public class GestionMascotas {
             miMascota.setRaza(JOptionPane.showInputDialog("Ingrese la raza de la mascota"));
             miMascota.setColorMascota(JOptionPane.showInputDialog("Ingrese el color de la mascota"));
             miMascota.setSexo(JOptionPane.showInputDialog("Ingrese el sexo de su mascota"));
+
+            //Se solicita el id del dueño
+            Long idDuenio=Long.parseLong(JOptionPane.showInputDialog("Ingrese el documento del dueño"));
+            Persona duenio=new Persona();//Se genera la instancia para permitir el registro
+            duenio.setIdPersona(idDuenio);//se agrega el id solicitado
+            miMascota.setDuenio(duenio);//Se agrega el dueño a la mascota
 
             System.out.println(miMascotaDao.actualizarMascota(miMascota));
             System.out.println();

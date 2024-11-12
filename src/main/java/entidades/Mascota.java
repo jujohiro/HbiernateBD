@@ -1,14 +1,9 @@
 package entidades;
 import java.io.Serializable;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
-    @Entity
+@Entity
     @Table(name="mascotas")//Se indica ya que el nombre de la clase es diferente al nombre de la tabla
     public class Mascota implements Serializable{
 
@@ -31,18 +26,24 @@ import jakarta.persistence.Table;
         @Column(length = 45)
         private String sexo;
 
+        @ManyToOne
+        @JoinColumn(name="persona_id",referencedColumnName = "id_persona")
+        private Persona duenio;
+
         //Creamos el constructor vacio
         public Mascota() {
 
         }
 
         //Creamos el constructor con parametros sin el id
-        public Mascota(String nombre, String raza, String colorMascota, String sexo) {
+        public Mascota(String nombre, String raza, String colorMascota, String sexo, Persona duenio) {
             super();
             this.nombre = nombre;
             this.raza = raza;
             this.colorMascota = colorMascota;
             this.sexo = sexo;
+            this.duenio=duenio;
+
         }
 
         //generamos los setters y getters correspondientes
@@ -85,12 +86,26 @@ import jakarta.persistence.Table;
         public void setSexo(String sexo) {
             this.sexo = sexo;
         }
+    public Persona getDuenio() {
+        return duenio;
+    }
+
+    public void setDuenio(Persona duenio) {
+        this.duenio = duenio;
+    }
 
         @Override
         public String toString() {
+
+            String duenioInfo = "Sin dueño";
+            if (duenio != null) {
+                duenioInfo = "id Dueño: "+duenio.getIdPersona()+", Nombre dueño: "+duenio.getNombre();
+            }
+
             return "Mascota [idMascota=" + idMascota + ", nombre=" + nombre + ","
                     + " raza=" + raza + ", colorMascota="
-                    + colorMascota + ", sexo=" + sexo + "]";
+                    + colorMascota + ", sexo=" + sexo + "]"
+                    + " Dueño: "+duenio;
         }
     }
 

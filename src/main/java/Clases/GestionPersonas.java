@@ -1,6 +1,7 @@
 package Clases;
 
 import dao.PersonaDao;
+import entidades.Mascota;
 import entidades.Nacimiento;
 import entidades.Persona;
 
@@ -51,6 +52,7 @@ public class GestionPersonas {
 
     private void registrar() {
         Persona miPersona =new Persona();
+
         miPersona.setIdPersona(Long.parseLong(JOptionPane.
                 showInputDialog("Ingrese el documento de la persona")));
         miPersona.setNombre(JOptionPane.showInputDialog("Ingrese el nombre de la Persona"));
@@ -59,10 +61,33 @@ public class GestionPersonas {
         miPersona.setTipo(Integer.parseInt(JOptionPane.showInputDialog("Ingrese el tipo")));
 
         miPersona.setNacimiento(obtenerDatosNacimiento());
+        int opc=0;
+        do {
+            opc=Integer.parseInt(JOptionPane.showInputDialog("Desea Registrar una Mascota?"
+                    + "\n1. SI\n2.No"));
+
+            if (opc==1) {
+                //Agregamos la Mascota a la lista
+                miPersona.getListaMascotas().add(obtenerDatosMascota(miPersona));
+            }
+        } while (opc!=2);
 
         System.out.println(miPersonaDao.registrarPersona(miPersona));
         System.out.println(miPersona);
         System.out.println();
+
+    }
+
+    private Mascota obtenerDatosMascota(Persona miPersona) {
+        Mascota miMascota=new Mascota();
+        miMascota.setIdMascota(null);
+        miMascota.setNombre(JOptionPane.showInputDialog("Ingrese el nombre de la mascota"));
+        miMascota.setRaza(JOptionPane.showInputDialog("Ingrese la raza de la mascota"));
+        miMascota.setColorMascota(JOptionPane.showInputDialog("Ingrese el color de la mascota"));
+        miMascota.setSexo(JOptionPane.showInputDialog("Ingrese el sexo de su mascota"));
+        miMascota.setDuenio(miPersona);//Agregamos el dueño definido en la relación
+
+        return miMascota;
 
     }
 
@@ -113,6 +138,17 @@ public class GestionPersonas {
             System.out.println();
             miPersona.setNombre(JOptionPane.
                     showInputDialog("Ingrese el nombre de la Persona"));
+
+            //Ponemos la opción si se quiere agregar una Mascota
+            int opc=0;
+            do {
+                opc=Integer.parseInt(JOptionPane.showInputDialog("Desea Registrar una Mascota?\n1. SI\n2.No"));
+
+                if (opc==1) {
+                    miPersona.getListaMascotas().add(obtenerDatosMascota(miPersona));//Agregamos la Mascota a la lista
+                }
+
+            } while (opc!=2);
 
             System.out.println(miPersonaDao.actualizarPersona(miPersona));
             System.out.println();

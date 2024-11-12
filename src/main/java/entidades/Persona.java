@@ -3,6 +3,8 @@ package entidades;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "persona")
@@ -10,6 +12,7 @@ public class Persona implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_persona")
     private Long idPersona;
 
@@ -28,8 +31,12 @@ public class Persona implements Serializable {
     @JoinColumn(name = "nacimiento_id", referencedColumnName = "id_nacimiento")
     private Nacimiento nacimiento;
 
-    public Persona(){
+    @OneToMany(mappedBy = "duenio", cascade = {CascadeType.PERSIST, CascadeType.MERGE}, orphanRemoval = true)
+    private List<Mascota> listaMascotas;
 
+
+    public Persona(){
+ this.listaMascotas=new ArrayList<Mascota>();
     }
 
     public Persona(Long idPersona, String nombre, String telefono,
@@ -40,6 +47,7 @@ public class Persona implements Serializable {
         this.profesion = profesion;
         this.tipo = tipo;
         this.nacimiento=nacimiento;
+        this.listaMascotas=new ArrayList<Mascota>();
     }
 
     public Long getIdPersona() {
@@ -89,6 +97,14 @@ public class Persona implements Serializable {
         this.nacimiento = nacimiento;
     }
 
+    public List<Mascota> getListaMascotas() {
+        return listaMascotas;
+    }
+
+    public void setListaMascotas(List<Mascota> listaMascotas) {
+        this.listaMascotas = listaMascotas;
+    }
+
     @Override
     public String toString() {
         return "Persona{" +
@@ -98,8 +114,8 @@ public class Persona implements Serializable {
                 ", profesion='" + profesion + '\'' +
                 ", tipo=" + tipo+
                 ", nacimiento=" + nacimiento +
+                ", listaMascotas=" + listaMascotas +
                 '}';
     }
-
 }
 

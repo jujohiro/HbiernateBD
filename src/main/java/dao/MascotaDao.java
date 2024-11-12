@@ -6,6 +6,7 @@ import entidades.Mascota;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.Query;
 
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,14 +14,19 @@ import java.util.List;
 public class MascotaDao {
     EntityManager entityManager= JPAUtil.getEntityManagerFactory().createEntityManager();
 
-    public Object registrarMascota(Mascota miMascota) {
+    public String registrarMascota(Mascota miMascota) {
+        String resp="";
+        try {
+            entityManager.getTransaction().begin();
+            entityManager.persist(miMascota);
+            entityManager.getTransaction().commit();
 
-        entityManager.getTransaction().begin();
-        entityManager.persist(miMascota);
-        entityManager.getTransaction().commit();
-
-        String resp="Mascota registrada!";
-
+            resp="Mascota Registrada!";
+        }catch (Exception e) {
+            JOptionPane.showMessageDialog(null,"No se puede registrar "
+                            + "la mascota verifique qué el dueño exista",
+                    "ERROR",JOptionPane.ERROR_MESSAGE);
+        }
         return resp;
     }
 
@@ -57,15 +63,19 @@ public class MascotaDao {
     }
 
     public String actualizarMascota(Mascota miMascota) {
+        String resp="";
+        try {
+            entityManager.getTransaction().begin();
+            entityManager.merge(miMascota);
+            entityManager.getTransaction().commit();
 
-        entityManager.getTransaction().begin();
-        entityManager.merge(miMascota);
-        entityManager.getTransaction().commit();
-
-        String resp="Mascota Actualizada!";
-
+            resp="Mascota Actualizada!";
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null,"No se puede actualizar "
+                            + "la mascota verifique qué el dueño exista",
+                    "ERROR",JOptionPane.ERROR_MESSAGE);
+        }
         return resp;
-
     }
 
     public String eliminarMascota(Mascota miMascota) {
