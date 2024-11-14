@@ -2,11 +2,13 @@ package dao;
 
 import aplicacion.JPAUtil;
 import entidades.Persona;
+import entidades.Producto;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.Query;
 
 import javax.swing.*;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class PersonaDao {
@@ -14,15 +16,22 @@ public class PersonaDao {
     EntityManager entityManager= JPAUtil.getEntityManagerFactory().createEntityManager();
 
     public String registrarPersona(Persona miPersona) {
-
-        entityManager.getTransaction().begin();
-        entityManager.persist(miPersona);
-        entityManager.getTransaction().commit();
-
-        String resp="Persona Registrada!";
-
+        String resp = "";
+        try {
+            entityManager.getTransaction().begin();
+            entityManager.persist(miPersona);
+            entityManager.getTransaction().commit();
+            resp = "Persona Registrada!";
+        } catch (Exception e) {
+            if (entityManager.getTransaction().isActive()) {
+                entityManager.getTransaction().rollback();
+            }
+            resp = "Error al registrar la persona: " + e.getMessage();
+            e.printStackTrace();
+        }
         return resp;
     }
+
 
     public Persona consultarPersona(Long idPersona) {
 
@@ -46,14 +55,28 @@ public class PersonaDao {
     }
 
     public String actualizarPersona(Persona miPersona) {
-
-        entityManager.getTransaction().begin();
-        entityManager.merge(miPersona);
-        entityManager.getTransaction().commit();
-
-        String resp="Persona Actualizada!";
-
+        String resp = "";
+        try {
+            entityManager.getTransaction().begin();
+            entityManager.merge(miPersona);
+            entityManager.getTransaction().commit();
+            resp = "Persona Actualizada!";
+        } catch (Exception e) {
+            if (entityManager.getTransaction().isActive()) {
+                entityManager.getTransaction().rollback();
+            }
+            resp = "Error al actualizar la persona: " + e.getMessage();
+            e.printStackTrace();
+        }
         return resp;
+    }
+
+    public List<Producto> obtenerProductosPorPersona(Long personaId) {
+        Persona persona = entityManager.find(Persona.class, personaId);
+        if (persona != null) {
+            return persona.getListaProductos();
+        }
+        return Collections.emptyList();
     }
 
     public String eliminarPersona(Persona miPersona) {

@@ -68,7 +68,6 @@ public class GestionMascotas {
             System.out.println();
             System.out.println("No se encontró la mascota");
         }
-        System.out.println();
     }
 
     private void consultarLista() {
@@ -108,7 +107,6 @@ public class GestionMascotas {
             Persona duenio=new Persona();//Se genera la instancia para permitir el registro
             duenio.setIdPersona(idDuenio);//se agrega el id solicitado
             miMascota.setDuenio(duenio);//Se agrega el dueño a la mascota
-
             System.out.println(miMascotaDao.actualizarMascota(miMascota));
             System.out.println();
         } else {

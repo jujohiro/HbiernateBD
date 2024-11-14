@@ -34,6 +34,12 @@ public class Persona implements Serializable {
     @OneToMany(mappedBy = "duenio", cascade = {CascadeType.PERSIST, CascadeType.MERGE}, orphanRemoval = true)
     private List<Mascota> listaMascotas;
 
+    @ManyToMany
+    @JoinTable(name = "personas_productos",
+            joinColumns = @JoinColumn(name="persona_id"),
+            inverseJoinColumns = @JoinColumn(name="producto_id"))
+    private List<Producto> listaProductos;
+
 
     public Persona(){
  this.listaMascotas=new ArrayList<Mascota>();
@@ -105,6 +111,14 @@ public class Persona implements Serializable {
         this.listaMascotas = listaMascotas;
     }
 
+    public List<Producto> getListaProductos() {
+        return listaProductos;
+    }
+
+    public void setListaProductos(List<Producto> listaProductos) {
+        this.listaProductos = listaProductos;
+    }
+
     @Override
     public String toString() {
         return "Persona{" +
@@ -112,9 +126,11 @@ public class Persona implements Serializable {
                 ", nombre='" + nombre + '\'' +
                 ", telefono='" + telefono + '\'' +
                 ", profesion='" + profesion + '\'' +
-                ", tipo=" + tipo+
+                ", tipo=" + tipo +
                 ", nacimiento=" + nacimiento +
-                ", listaMascotas=" + listaMascotas +
+               // ", listaMascotas=" + listaMascotas +
+               // ", listaProductos=" + listaProductos +
+
                 '}';
     }
 }

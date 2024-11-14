@@ -4,13 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="887d5476-f0fc-4cba-8ce8-96dee3645488" name="Changes" comment="se hacen unos cambios en la app">
+    <list default="true" id="887d5476-f0fc-4cba-8ce8-96dee3645488" name="Changes" comment="Se realiza la guia numero 2 de Hibernate.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Clases/GestionProductos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/ProductoDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entidades/Producto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Clases/GestionMascotas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases/GestionMascotas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Clases/GestionPersonas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases/GestionPersonas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/MascotaDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/MascotaDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/aplicacion/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aplicacion/Principal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/PersonaDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/PersonaDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/entidades/Mascota.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entidades/Mascota.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/entidades/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entidades/Persona.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,23 +63,23 @@
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MascotaGUI.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Principal.executor&quot;: &quot;Run&quot;,
-    &quot;Application.gui.MascotaGUI.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Hibernate1&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/juanj/Desktop/ADSO/JAVA/FUNDAMENTOS DE PROGRAMACION EN JAVA/CONEXION BD JAVA/bd_hibernate/src/main/java/org/example/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Application.MascotaGUI.executor": "Run",
+    "Application.Principal.executor": "Run",
+    "Application.gui.MascotaGUI.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "Hibernate1",
+    "kotlin-language-version-configured": "true",
+    "onboarding.tips.debug.path": "C:/Users/juanj/Desktop/ADSO/JAVA/FUNDAMENTOS DE PROGRAMACION EN JAVA/CONEXION BD JAVA/bd_hibernate/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\juanj\Desktop\ADSO\JAVA\FUNDAMENTOS DE PROGRAMACION EN JAVA\CONEXION BD JAVA\bd_hibernate" />
@@ -185,7 +190,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731130758558</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Se realiza la guia numero 2 de Hibernate.">
+      <option name="closed" value="true" />
+      <created>1731369841728</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1731369841728</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -203,7 +216,8 @@
     <MESSAGE value="Se realiza la primera guia.hibernate y JPA" />
     <MESSAGE value="se hacen unos cambios en la app" />
     <MESSAGE value="se realiza la segunda guia, se prueba y funciona tal cual la guia." />
-    <option name="LAST_COMMIT_MESSAGE" value="se realiza la segunda guia, se prueba y funciona tal cual la guia." />
+    <MESSAGE value="Se realiza la guia numero 2 de Hibernate." />
+    <option name="LAST_COMMIT_MESSAGE" value="Se realiza la guia numero 2 de Hibernate." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -215,7 +229,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/aplicacion/Principal.java</url>
-          <line>7</line>
+          <line>8</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
